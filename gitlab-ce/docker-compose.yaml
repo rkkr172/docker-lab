@@ -3,12 +3,12 @@ version: "1"
 services:
   gitlab-ce:
     container_name: 'gitlab_ce'
-    image: 'gitlab/gitlab-ce:latest'
+    image: 'gitlab/gitlab-ce'
     ports:  #22,443,80
       - '80:80'
       - '8443:443'
       - '2222:22'
     volumes:
-      - 'gitlab_etc:/etc/gitlab'
-      - 'gitlab_opt:/var/opt/gitlab'
-      - 'gitlab_var:/var/log/gitlab'
+      - 'gitlab_etc/:/etc/gitlab'
+      - 'gitlab_opt/:/var/opt/gitlab'
+      - 'gitlab_var/:/var/log/gitlab'
