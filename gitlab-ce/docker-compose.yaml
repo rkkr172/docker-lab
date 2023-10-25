@@ -9,6 +9,6 @@ services:
       - '8443:443'
       - '2222:22'
     volumes:
-      - 'gitlab_etc/:/etc/gitlab'
-      - 'gitlab_opt/:/var/opt/gitlab'
-      - 'gitlab_var/:/var/log/gitlab'
+      - './gitlab_etc/:/etc/gitlab:rw'
+      - './gitlab_opt/:/var/opt/gitlab:rw'
+      - './gitlab_var/:/var/log/gitlab:rw'
