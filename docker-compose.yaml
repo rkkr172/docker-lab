@@ -1,1 +1,6 @@
 version: "1"
+service:
+  container_name: nginx
+  image: nginx
+  ports:
+    - 80:80
